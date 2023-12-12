@@ -1,0 +1,29 @@
+body {
+    margin-bottom: 60px; /* Asegurar que el contenido no se superponga al footer en dispositivos pequeños */
+  }
+
+  footer {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .footer-contact {
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    font-size: 20px;
+  }
+
+  .resources {
+    list-style: none;
+    padding: 0;
+  }
+
+  .resources li {
+    margin-bottom: 10px;
+  }
+
+  .display-block{
+    display: block;
+  }

@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title> Biblioteca Monistrol - Catàleg  </title>
+
+<div>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+ <link rel="stylesheet" href="/Web/product.css">
+ <script src="archivo.js"></script>
+ <link rel="stylesheet" href="cataleg.css">
+ <link rel="stylesheet" href="/Web/footer.css">
+
+</div>
+<script>
+
+
+    $(".filter-button").click(function() {
+    var value = $(this).attr('data-filter');
+    if (value === "all") {
+      $('.image-container').show('1000');
+    } else {
+      $(".image-container").not('.' + value).hide('3000');
+      $('.image-container').filter('.' + value).show('3000');
+    }
+  });
+  
+
+  // Agregar la clase activa al botón seleccionado
+  $(".filter-button").on("click", function() {
+    $(this).addClass('btn-primary').siblings().removeClass('btn-primary');
+  });
+</script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 800px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+          border-radius: 30px;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    <link href="carousel.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <svg class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+ 
+<header data-bs-theme="dark">
+  <nav class=" navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <img class="navbar-brand" src="/imatges/Olesa__1_-removebg-preview.png" style="height: 70px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/Web/index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Biblioteca
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/Web/cataleg.html">Cataleg </a>
+              <a class="dropdown-item" href="/Web/rescursos_digitals.html"> Recursos digitals</a>
+              <a class="dropdown-item" href="/Web/esdeveniments.html"> Esdeveniments</a>
+            </div>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Web/OnEstem.html">On estem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Web/Contacte.html">Contacte</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="max-with form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+        <form class="d-flex inline" role="search">
+          <a class="btn btn-outline-success" href="/Web/Sign-in.html" >Sign up</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+    <div class="position-relative overflow-hidden p-3 text-center bg-body-tertiary">
+      <div class="col-md-6 p-lg-5 mx-auto my-5">
+        <h1 class="color-biblioteca fw-bold">Biblioteca Monistrol</h1>
+        <div class="d-flex gap-3 justify-content-center lead fw-normal">
+</main>
+
+<hr class="featurette-divider">
+<hr class="transparent">
+<div>
+    <h1 class="activitats  fw-bold">Catàlegs</h1>
+</div>
+<hr class="transparent">
+<hr class="featurette-divider">
+<div class="container marketing">
+
+
+
+  
+    <style>
+      .image-container {
+        position: relative;
+        overflow: hidden;
+      }
+  
+      .filter-button {
+        margin: 5px;
+      }
+  
+      .image {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+   <main>
+    <div class="container mt-5">
+    <div class="btn-group d-flex flex-wrap mb-4" role="group">
+      <button type="button" class="btn btn-primary filter" data-filter="all">Tot</button>
+      <button type="button" class="btn btn-primary filter" data-filter="aventura">Aventura</button>
+      <button type="button" class="btn btn-primary filter" data-filter="romance">Romança</button>
+      <button type="button" class="btn btn-primary filter" data-filter="comedia">Comèdia</button>
+      <button type="button" class="btn btn-primary filter" data-filter="poema">Poema</button>
+      <button type="button" class="btn btn-primary filter" data-filter="deporte">Esport</button>
+      <button type="button" class="btn btn-primary filter" data-filter="manga">Manga</button>
+
+
+    </div>
+  
+    <div class="row" id="image-gallery">
+
+      <!-- Acción -->
+      <div class="col-6 col-md-4 col-lg-3 filter-item aventura">
+        <img src="/imatges/Libros_aventura/Oeste.jpeg"  class="img-fluid">
+      <p class="libros">Oeste con la noche</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item aventura">
+        <img src="/imatges/Libros_aventura/412TFq6cKjL._AC_UY218_ML3_.jpg"  class="img-fluid">
+      <p class="libros">Desierto solitario</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item aventura">
+        <img src="/imatges/Libros_aventura/annapurna.jpeg"  class="img-fluid">
+      <p class="libros">Annapurna</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item aventura">
+        <img src="/imatges/Libros_aventura/los cinco.jpeg"  class="img-fluid">
+      <p class="libros">Los Cinco frente a la aventura</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item aventura">
+        <img src="/imatges/Libros_aventura/9788485346936-189x300.jpg"  class="img-fluid">
+      <p class="libros">Exploración del Río Colorado</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item aventura">
+        <img src="/imatges/Libros_aventura/jardinsombrio.jpg"  class="img-fluid">
+      <p class="libros">Jardín Sombrio</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item aventura">
+        <img src="/imatges/Libros_aventura/lasmontañas.jpeg"  class="img-fluid">
+      <p class="libros">En las montañas de la locura</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item aventura">
+        <img src="/imatges/Libros_aventura/la_isla_misteriosa.jpg"  class="img-fluid">
+      <p class="libros">La isla misteriosa</p>
+      </div>
+  
+  
+      <!-- Romance -->
+      <div class="col-6 col-md-4 col-lg-3 filter-item romance">
+        <img src="/imatges/Libros_romance/orgullo-prejuicio-portada-cke.webp" class="img-fluid">
+        <p class="libros" class="libros"> Orgullo y prejuicio</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item romance">
+        <img src="/imatges/Libros_romance/libro-el-ruisenor-portada-cke.webp" class="img-fluid">
+      <p class="libros"> El ruiseñor</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item romance">
+        <img src="/imatges/Libros_romance/edenbrooke-portada-cke.webp" class="img-fluid">
+      <p class="libros"> Edenbrooke </p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item romance">
+        <img src="/imatges/Libros_romance/mapa-de-los-anhelos.webp" class="img-fluid">
+      <p class="libros">El mapa de los anhelos </p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item romance">
+        <img src="/imatges/Libros_romance/el-jinete-de-bronce-libro.webp" class="img-fluid">
+      <p class="libros"> El jinete de bronce </p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item romance">
+        <img src="/imatges/Libros_romance/llamame-por-tu-nombre-libro-cke.webp" class="img-fluid">
+      <p class="libros"> Llámame por tu nombre</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item romance">
+        <img src="/imatges/Libros_romance/forastera-libro-0-cke.webp" class="img-fluid">
+      <p class="libros"> Forastera </p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item romance">
+        <img src="/imatges/Libros_romance/rayuela-portada-cke.webp" class="img-fluid">
+      <p class="libros"> Rayuela </p>
+      </div>
+     
+    
+      <!-- Comedia -->
+      <div class="col-6 col-md-4 col-lg-3 filter-item comedia">
+        <img src="/imatges/Libros_comedia/Maldito-karma.webp" alt="Comedia 1" class="img-fluid">
+      <p class="libros"> Maldito karma</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item comedia">
+        <img src="/imatges/Libros_comedia/Sin-noticias-de-Gurb.webp" alt="Comedia 2" class="img-fluid">
+      <p class="libros">Sin noticias de Gurbo </p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item comedia">
+        <img src="/imatges/Libros_comedia/Reir-es-la-unica-salida.webp" alt="Comedia 1" class="img-fluid">
+      <p class="libros"> Reír es la única salida</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item comedia">
+        <img src="/imatges/Libros_comedia/Ha-vuelto.webp" alt="Comedia 2" class="img-fluid">
+      <p class="libros"> Ha vuelto</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item comedia">
+        <img src="/imatges/Libros_comedia/Alicia-en-el-pais-sin-wifi.webp" alt="Comedia 1" class="img-fluid">
+      <p class="libros">Alicia en el país sin wifi </p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item comedia">
+        <img src="/imatges/Libros_comedia/Tacones-y-mazmorras.webp" alt="Comedia 2" class="img-fluid">
+      <p class="libros"> Tacones y mazmorras </p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item comedia">
+        <img src="/imatges/Libros_comedia/El-proyecto-esposa.webp" alt="Comedia 1" class="img-fluid">
+      <p class="libros"> El proyecto esposa</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item comedia">
+        <img src="/imatges/Libros_comedia/elkoala.jpg" alt="Comedia 2" class="img-fluid">
+      <p class="libros"> El koala asesino</p>
+      </div>
+  
+      <!-- Poema -->
+      <div class="col-6 col-md-4 col-lg-3 filter-item poema">
+        <img src="/imatges/Libros_poesia/1662991471-31pcLR5rvmS._SL500_.jpg" class="img-fluid">
+        <p class="libros">Variaciones sobre un tema dado</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item poema">
+        <img src="/imatges/Libros_poesia/adios_al_frio.jpg" class="img-fluid">
+        <p class="libros">Adiós al frío</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item poema">
+        <img src="/imatges/Libros_poesia/autobiografia_de_rojo.jpg" class="img-fluid">
+        <p class="libros">Autobiografía de rojo</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item poema">
+        <img src="/imatges/Libros_poesia/La ataraxia del corazón.jpg" class="img-fluid">
+        <p class="libros">La ataraxia del corazón</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item poema">
+        <img src="/imatges/Libros_poesia/Tres Puntos Bluets.jpg" class="img-fluid">
+        <p class="libros">Tres Puntos Bluets</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item poema">
+        <img src="/imatges/Libros_poesia/El amor, las mujeres y la vida.jpg" class="img-fluid">
+        <p class="libros">El amor, las mujeres y la vida</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item poema">
+        <img src="/imatges/Libros_poesia/Visor El iris silvestre.jpg" class="img-fluid">
+        <p class="libros">Visor El iris silvestre</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item poema">
+        <img src="/imatges/Libros_poesia/La inercia del silencio.jpg" class="img-fluid">
+        <p class="libros">La inercia del silencio</p>
+      </div>
+
+      <!-- Deportes -->
+      <div class="col-6 col-md-4 col-lg-3 filter-item deporte">
+        <img src="/imatges/Libros_deportes/Bola Cuatro.webp" class="img-fluid">
+      <p class="libros">Bola Cuatro</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item deporte">
+        <img src="/imatges/Libros_deportes/El Juego de las Grandes Ligas.webp" class="img-fluid">
+      <p class="libros">El Juego de las Grandes Ligas</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item deporte">
+        <img src="/imatges/Libros_deportes/El Arte de Fildear.webp" class="img-fluid">
+      <p class="libros">El Arte de Fildear</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item deporte">
+        <img src="/imatges/Libros_deportes/Luces de Viernes por la Noche.webp" class="img-fluid">
+      <p class="libros">Luces de Viernes por la Noche</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item deporte">
+        <img src="/imatges/Libros_deportes/León de Papel.webp" class="img-fluid">
+      <p class="libros">León de Papel</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item deporte">
+        <img src="/imatges/Libros_deportes/Seabiscuit.webp" class="img-fluid">
+      <p class="libros">Seabiscuit</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item deporte">
+        <img src="/imatges/Libros_deportes/Nacido para Correr.webp" class="img-fluid">
+      <p class="libros">Nacido para Correr</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item deporte">
+        <img src="/imatges/Libros_deportes/Un Sentido de Dónde Estás.webp" class="img-fluid">
+      <p class="libros">Un Sentido de Dónde Estás</p>
+      </div>
+
+      <!-- Manga -->
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga">
+        <img src="/imatges/Libros_manga/jujutsu kaisen 0.jpg" class="img-fluid">
+      <p class="libros">Jujutsu kaisen 0</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga">
+        <img src="/imatges/Libros_manga/Jujutsu.webp" class="img-fluid">
+      <p class="libros">Jujutsu kaisen vol. 1</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga">
+        <img src="/imatges/Libros_manga/Demon Slayer: Kimetsu no Yaiba, Vol. 1.jpg" class="img-fluid">
+      <p class="libros">Kimetsu no Yaiba vol. 1</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga">
+        <img src="/imatges/Libros_manga/Kimetsu 2.jpeg" class="img-fluid">
+      <p class="libros">Kimetsu no Yaiba vol. 2</p>    
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga">
+        <img src="/imatges/Libros_manga/Naruto.jpeg" class="img-fluid">
+      <p class="libros">Naruto vol. 1</p>    
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga">
+        <img src="/imatges/Libros_manga/naruto 2.jpeg" class="img-fluid">
+      <p class="libros">Naruto vol. 2</p>    
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga">
+        <img src="/imatges/Libros_manga/One piece 1.jpg" class="img-fluid">
+      <p class="libros">One piece vol. 1</p>    
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga">
+        <img src="/imatges/Libros_manga/one piece 2.jpeg" class="img-fluid">
+      <p class="libros">One piece vol. 2</p>    
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga deporte">
+        <img src="/imatges/Libros_manga/inazuma 1.jpg" class="img-fluid">
+      <p class="libros">Inazuma eleven vol. 1</p>    
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga deporte">
+        <img src="/imatges/Libros_manga/inazuma 2.jpg" class="img-fluid">
+      <p class="libros">Inazuma eleven vol. 2</p>    
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga deporte">
+        <img src="/imatges/Libros_manga/inazuma 3.jpg" class="img-fluid">
+      <p class="libros">Inazuma eleven vol. 3</p>    
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 filter-item manga deporte">
+        <img src="/imatges/Libros_manga/inazuma 4.jpg" class="img-fluid">
+      <p class="libros">Inazuma eleven vol. 4</p>    
+      </div>
+     
+
+    </div>
+  </div>
+</main>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+    $(".filter").click(function(){
+      var category = $(this).data("filter");
+      if(category === "all"){
+        $(".filter-item").show();
+      } else {
+        $(".filter-item").not("." + category).hide();
+        $(".filter-item").filter("." + category).show();
+      }
+    });
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr class="featurette-divider">
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 footer-contact">
+        <h4>Información de Contacto</h4>
+        <p>Email: bibliotecamonistrol@gmail.com</p>
+        <p>Teléfono: +34 605 76 00 64</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Redes Sociales</h4>
+        <div class="social-icons">
+          <a class="display-block" href="#" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+          <a class="display-block" href="#" target="_blank"><i class="fab fa-twitter"></i>Instagram</a>
+          <a class="display-block" href="#" target="_blank"><i class="fab fa-instagram"></i>X(Twitter)</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h4>Recursos Destacados</h4>
+        <ul class="resources">
+          <li><a href="/Web/index.html">Inicio</a></li>
+          <li><a href="/Web/OnEstem.html">On estem</a></li>
+          <li><a href="/Web/esdeveniments.html">Eventos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>© 2023 Biblioteca de Monistrol.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </body>
+</html>

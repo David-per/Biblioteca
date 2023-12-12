@@ -1,0 +1,11 @@
+body{
+  background-image: url(/imatges/6808.webp);
+}
+
+.container{
+  background-image: linear-gradient(to left,#8B6540, #8B6540 ,white , #8B6540 , #8B6540);
+}
+
+.contact-info{
+  margin-top: 11%;
+}

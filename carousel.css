@@ -1,0 +1,159 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: rgb(var(--bs-tertiary-color-rgb));
+  background-image: linear-gradient(to right, #8B6540 , white);
+
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin-left: 5%; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+  margin-left: 2%;
+}
+.lead {
+  margin-left: 2%;
+}
+.img_margin {
+  margin-left: 2%;
+}
+
+.navbar-toggler{
+  border: 1px white;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 4rem;
+  }
+}
+
+
+.btn-outline-success{
+color:rgb(31, 30, 30);
+border-color: rgb(31, 30, 30);;
+--bs-btn-border-color: rgb(31, 30, 30);;
+--bs-btn-hover-color:#fff;
+--bs-btn-hover-bg: rgb(31, 30, 30);;
+--bs-btn-hover-border-color: rgb(31, 30, 30);;
+--bs-btn-focus-shadow-rgb:25,135,84;
+--bs-btn-active-color:#fff;
+--bs-btn-active-bg:#198198754754;
+--bs-btn-active-border-color:#198754;
+--bs-btn-active-shadow:inset 0 3px 5px rgb(31, 30, 30);;
+--bs-btn-disabled-color:#198754;
+--bs-btn-disabled-bg:transparent;
+--bs-btn-disabled-border-color:#198754;
+}
+.inline{
+  margin-inline-start: 1%;
+}
+.me-2{
+  color: rgb(56, 56, 216) ;
+}
+
+.bg-dark .navbar .navbar-expand-md .navbar-dark .leadfixed-top {
+  background-color: #198754;
+  color: #198754;
+}
+
+.navbar-expand-md {
+  color: rgb(161, 62, 62);
+  background-color: #56cc95; 
+        --bs-navbar-color: white;     /* Cambiar color biblio y on estem */
+        --bs-navbar-hover-color: rgb(195, 195, 195);/*  */  
+        --bs-navbar-disabled-color:rgba(var(--bs-emphasis-color-rgb), 0.3);/*  */
+        --bs-navbar-active-color:rgba(var(--bs-emphasis-color-rgb), 1);/* Cambiar color inicio */
+}
+
+color{
+  color: #198754;
+  background-color: #198754;
+  
+}
+.bg-dark{
+  --bs-bg-opacity:1;
+  background-image: linear-gradient(to left, #8B6540 , white);
+}
+.nav-link{
+  color: black !important;
+}
+.active{
+  color: black !important;
+}
+.text-1{
+  background-image: linear-gradient(to right, #8B6540 ,#8B6540 , transparent);
+}
+.text-2{
+  background-image: linear-gradient(to right, transparent ,#8B6540,#8B6540, #8B6540 , #8B6540 , transparent);
+}
+.text-3{
+  background-image: linear-gradient(to left, #8B6540 ,#8B6540 , transparent);
+}
+.dropdown-item{
+  color: black !important;
+  background-color: transparent;
+  }
+  
+  .dropdown-menu{
+    background-image: linear-gradient(to right, white , white, white , #8B6540) !important;
+  
+  }
+  .dropdown-item:hover{color:black !important;
+    background-color:transparent !important;}
+    
+
+    .dropdown-item:hover{
+      background-color: transparent;
+      opacity: 0,7;
+    }
+    .max-with{
+      max-width: 150px;
+  }
